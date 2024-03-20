@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 1380px;
+  max-width: 1440px;
   padding: 0 15px;
   margin: 0 auto;
 `;
