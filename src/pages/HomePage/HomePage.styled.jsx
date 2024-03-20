@@ -54,4 +54,8 @@ export const AboutContainer = styled.div`
 export const AboutText = styled.p`
   color: var(--white-color);
   margin-bottom: 12px;
+
+  span {
+    color: var(--red-color);
+  }
 `;
