@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/campers-test/static/css/main.fbaec29e.css",
-    "main.js": "/campers-test/static/js/main.338eaa78.js",
+    "main.css": "/campers-test/static/css/main.4b677b26.css",
+    "main.js": "/campers-test/static/js/main.cff173ef.js",
+    "static/media/Inter-SemiBold.ttf": "/campers-test/static/media/Inter-SemiBold.6058d3da655fb35169c2.ttf",
+    "static/media/Inter-Medium.ttf": "/campers-test/static/media/Inter-Medium.3f7acfe50aad7ad68548.ttf",
+    "static/media/Inter-Regular.ttf": "/campers-test/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
     "static/media/pexels-photo-15167402.jpeg": "/campers-test/static/media/pexels-photo-15167402.03f9dc54fe596c4a0386.jpeg",
-    "static/media/Saira_Condensed-Regular.ttf": "/campers-test/static/media/Saira_Condensed-Regular.2d8c7f49e2e12e9bd714.ttf",
-    "static/media/Saira_Condensed-SemiBold.ttf": "/campers-test/static/media/Saira_Condensed-SemiBold.2535ea89dbe7468fb883.ttf",
-    "static/media/Saira_Condensed-Medium.ttf": "/campers-test/static/media/Saira_Condensed-Medium.d26bf48b894a6f400396.ttf",
+    "static/media/type.svg": "/campers-test/static/media/type.a81d7ce0c42bf77c4f5e665db7502378.svg",
     "index.html": "/campers-test/index.html",
-    "main.fbaec29e.css.map": "/campers-test/static/css/main.fbaec29e.css.map",
-    "main.338eaa78.js.map": "/campers-test/static/js/main.338eaa78.js.map"
+    "main.4b677b26.css.map": "/campers-test/static/css/main.4b677b26.css.map",
+    "main.cff173ef.js.map": "/campers-test/static/js/main.cff173ef.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbaec29e.css",
-    "static/js/main.338eaa78.js"
+    "static/css/main.4b677b26.css",
+    "static/js/main.cff173ef.js"
   ]
 }
