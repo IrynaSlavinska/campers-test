@@ -24,10 +24,10 @@ export const HomeWrap = styled.div`
 
 export const HomeTitle = styled.h1`
   font-weight: 600;
-  font-size: 36px;
+  font-size: 32px;
   line-height: 1.07;
   margin-bottom: 28px;
-  max-width: 460px;
+  max-width: 600px;
 `;
 
 export const Company = styled.div`
@@ -45,7 +45,7 @@ export const CompanyName = styled.p`
 
 export const AboutContainer = styled.div`
   align-self: flex-end;
-  max-width: 600px;
+  max-width: 700px;
   backdrop-filter: blur(8px);
   padding: 20px;
   border-radius: 16px;

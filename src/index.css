@@ -5,32 +5,32 @@
   --red-color: #E44848;
   --yellow-color: #FFC531;
   --backdrop-color: #11121380;
-  --body-color: #F7F7F7;
+  --light-color: #F7F7F7;
   --white-color: #F2F4F7;
 }
 
 @font-face {
-  font-family: 'Saira';
-  src: local('Saira'),
-    url('./fonts/Saira_Condensed-Regular.ttf') format('truetype');
+  font-family: 'Inter';
+  src: local('Inter'),
+    url('./fonts/Inter-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Saira';
-  src: local('Saira'),
-    url('./fonts/Saira_Condensed-Medium.ttf') format('truetype');
+  font-family: 'Inter';
+  src: local('Inter'),
+    url('./fonts/Inter-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Saira';
-  src: local('Saira'),
-    url('./fonts/Saira_Condensed-SemiBold.ttf') format('truetype');
+  font-family: 'Inter';
+  src: local('Inter'),
+    url('./fonts/Inter-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -85,13 +85,11 @@ img {
 }
 
 body {
-  font-family: 'Saira', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
-  line-height: 1.24;
-  letter-spacing: 0.03em;
+  font-size: 16px;
   margin: 0;
   color: var(--black-color);
-  background-color: var(--body-color);
+
 }
