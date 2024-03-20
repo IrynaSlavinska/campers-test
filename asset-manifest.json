@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/campers-test/static/css/main.fbaec29e.css",
+    "main.js": "/campers-test/static/js/main.338eaa78.js",
+    "static/media/pexels-photo-15167402.jpeg": "/campers-test/static/media/pexels-photo-15167402.03f9dc54fe596c4a0386.jpeg",
+    "static/media/Saira_Condensed-Regular.ttf": "/campers-test/static/media/Saira_Condensed-Regular.2d8c7f49e2e12e9bd714.ttf",
+    "static/media/Saira_Condensed-SemiBold.ttf": "/campers-test/static/media/Saira_Condensed-SemiBold.2535ea89dbe7468fb883.ttf",
+    "static/media/Saira_Condensed-Medium.ttf": "/campers-test/static/media/Saira_Condensed-Medium.d26bf48b894a6f400396.ttf",
+    "index.html": "/campers-test/index.html",
+    "main.fbaec29e.css.map": "/campers-test/static/css/main.fbaec29e.css.map",
+    "main.338eaa78.js.map": "/campers-test/static/js/main.338eaa78.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fbaec29e.css",
+    "static/js/main.338eaa78.js"
+  ]
+}
