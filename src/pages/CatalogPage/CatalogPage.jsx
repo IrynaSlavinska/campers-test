@@ -5,9 +5,10 @@ import { getAllAdvert } from '../../redux/advert/operations';
 import { selectIsLoading } from '../../redux/selectors';
 import { selectAdvert } from '../../redux/selectors';
 
-import { Sidebar } from 'components/CatalogPartials/Sidebar';
+import { Sidebar } from 'components/FilterPartials/Sidebar';
 
 import { CatalogContainer } from './CatalogPage.styled';
+import { Catalog } from 'components/Catalog/Catalog';
 
 export const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -22,9 +23,10 @@ export const CatalogPage = () => {
 
   return (
     <>
-      {isLoading && <div>loading...</div>}
       <CatalogContainer>
         <Sidebar />
+
+        {isLoading ? <div>loading...</div> : <Catalog adverts={adverts} />}
       </CatalogContainer>
     </>
   );
