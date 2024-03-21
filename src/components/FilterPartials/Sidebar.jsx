@@ -1,7 +1,8 @@
 import { Location } from './Location';
 import { VehicleType } from './VehicleType';
 
-import { Filter } from './CatalogPartials.styled';
+import { Filter } from './FilterPartials.styled';
+import { VehicleEquipment } from './VehicleEquipment';
 
 export const Sidebar = () => {
   return (
@@ -9,6 +10,8 @@ export const Sidebar = () => {
       <Location />
 
       <Filter>Filters</Filter>
+
+      <VehicleEquipment />
 
       <VehicleType />
     </form>

@@ -1,15 +1,14 @@
-import { LocationLabel, LocationInput } from './CatalogPartials.styled';
+import { LocationLabel, LocationInput } from './FilterPartials.styled';
 
 export const Location = () => {
   return (
-    <LocationLabel for="location">
+    <LocationLabel>
       Location
       <LocationInput
         type="text"
         name="location"
-        id="location"
         placeholder="Kyiv, Ukraine"
-        autofocus
+        autoFocus
       />
     </LocationLabel>
   );

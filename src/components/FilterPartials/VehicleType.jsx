@@ -3,7 +3,13 @@ import { useState } from 'react';
 import typeSprite from 'assets/icons/type.svg';
 import { VEHICLE_TYPE_ARRAY } from 'assets/constants';
 
-import { FilterTitle, TypeRadioInput } from './CatalogPartials.styled';
+import {
+  FilterTitle,
+  TypeRadioInput,
+  TypesList,
+  TypeItem,
+  TypeLabel,
+} from './FilterPartials.styled';
 
 export const VehicleType = () => {
   const [selectedType, setSelectedType] = useState(null);
@@ -13,17 +19,17 @@ export const VehicleType = () => {
   };
 
   return (
-    <div>
+    <>
       <FilterTitle>Vehicle type</FilterTitle>
-      <ul>
+      <TypesList>
         {VEHICLE_TYPE_ARRAY.map(item => {
           return (
-            <li key={item.id}>
-              <label>
+            <TypeItem key={item.id}>
+              <TypeLabel>
                 <TypeRadioInput
                   type="radio"
                   name="typeId"
-                  value={selectedType}
+                  defaultValue={selectedType}
                   checked={selectedType === item.id}
                   onChange={() => handleTypeChange(item.id)}
                 />
@@ -31,11 +37,11 @@ export const VehicleType = () => {
                   <use xlinkHref={`${typeSprite}#${item.src}`} />
                 </svg>
                 {item.name}
-              </label>
-            </li>
+              </TypeLabel>
+            </TypeItem>
           );
         })}
-      </ul>
-    </div>
+      </TypesList>
+    </>
   );
 };

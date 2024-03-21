@@ -27,7 +27,7 @@ export const HomeTitle = styled.h1`
   font-size: 32px;
   line-height: 1.07;
   margin-bottom: 28px;
-  max-width: 600px;
+  max-width: 530px;
 `;
 
 export const Company = styled.div`
