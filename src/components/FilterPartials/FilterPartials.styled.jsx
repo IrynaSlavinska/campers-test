@@ -56,7 +56,6 @@ export const TypesList = styled.ul`
 export const TypeItem = styled.li`
   padding: 17px 30px;
   height: 95px;
-  width: 112px;
   border-radius: 10px;
   border: 1px solid rgba(16, 24, 40, 0.2);
   mix-blend-mode: multiply;
@@ -66,7 +65,6 @@ export const TypeItem = styled.li`
 
   &:nth-of-type(2) {
     padding: 9.5px 24px;
-    width: 128px;
   }
 `;
 

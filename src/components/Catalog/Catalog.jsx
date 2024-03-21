@@ -1,4 +1,17 @@
-import { Content, Gallery } from './Catalog.styled';
+import sprite from 'assets/icons/icons-sprite.svg';
+
+import {
+  Content,
+  Gallery,
+  GalleryItem,
+  CardImage,
+  CardTitle,
+  ReviewsTitle,
+  LocationTitle,
+  CardDescription,
+  ShowMoreButton,
+  FavButton,
+} from './Catalog.styled';
 
 export const Catalog = ({ adverts }) => {
   return (
@@ -6,24 +19,61 @@ export const Catalog = ({ adverts }) => {
       <Gallery>
         {adverts.map(item => {
           return (
-            <li key={item._id}>
-              <img src={item.gallery[0]} alt={item.name} />
+            <GalleryItem key={item._id}>
+              <CardImage src={item.gallery[0]} alt={item.name} />
               <div>
-                <h2>{item.name}</h2>
-                <svg width={16} height={16}>
-                  <use></use>
-                </svg>
-                <h3>
-                  {item.rating} ({item.reviews.length} Reviews)
-                </h3>
-                <h3>{item.location}</h3>
-                <p>{item.description}</p>
-                <ul>
-                  <li>details array</li>
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    marginBottom: '8px',
+                  }}
+                >
+                  <CardTitle>{item.name}</CardTitle>
+                  <div
+                    style={{
+                      display: 'flex',
+                      gap: '12px',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <CardTitle>&#x20AC; {item.price.toFixed(2)}</CardTitle>
+                    <FavButton type="button">
+                      <svg width={16} height={16}>
+                        <use xlinkHref={`${sprite}#icon-heart`}></use>
+                      </svg>
+                    </FavButton>
+                  </div>
+                </div>
+                <div
+                  style={{ display: 'flex', gap: '16px', marginBottom: '24px' }}
+                >
+                  <ReviewsTitle>
+                    <svg width={16} height={16}>
+                      <use xlinkHref={`${sprite}#icon-star`}></use>
+                    </svg>
+                    {item.rating} ({item.reviews.length} Reviews)
+                  </ReviewsTitle>
+                  <LocationTitle>
+                    <svg width={16} height={16}>
+                      <use xlinkHref={`${sprite}#icon-map-pin`}></use>
+                    </svg>
+
+                    {item.location}
+                  </LocationTitle>
+                </div>
+
+                <CardDescription>{item.description}</CardDescription>
+                <ul style={{ marginBottom: '24px' }}>
+                  <li>
+                    <svg width={20} height={20}>
+                      <use xlinkHref={`${sprite}#icon-ac`}></use>
+                    </svg>
+                  </li>
                 </ul>
+                <ShowMoreButton type="button">Show more</ShowMoreButton>
               </div>
-              <button type="button">Show more</button>
-            </li>
+            </GalleryItem>
           );
         })}
       </Gallery>

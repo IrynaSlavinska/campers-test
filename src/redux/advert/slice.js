@@ -11,9 +11,9 @@ const handleError = (state, action) => {
 };
 
 const advertSlice = createSlice({
-  name: 'advert',
+  name: 'adverts',
   initialState: {
-    advert: [],
+    adverts: [],
     oneAdvert: {},
     isLoading: false,
     error: null,
@@ -23,7 +23,7 @@ const advertSlice = createSlice({
     builder
       .addCase(getAllAdvert.pending, handlePending)
       .addCase(getAllAdvert.fulfilled, (state, action) => {
-        state.advert = action.payload;
+        state.adverts = action.payload;
         state.isLoading = false;
         state.error = null;
       })

@@ -19,8 +19,6 @@ export const CatalogPage = () => {
     dispatch(getAllAdvert());
   }, [dispatch]);
 
-  console.log(adverts);
-
   return (
     <>
       <CatalogContainer>
