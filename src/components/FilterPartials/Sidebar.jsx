@@ -1,7 +1,7 @@
 import { Location } from './Location';
 import { VehicleType } from './VehicleType';
 
-import { Filter } from './FilterPartials.styled';
+import { Filter, SearchButton } from './FilterPartials.styled';
 import { VehicleEquipment } from './VehicleEquipment';
 
 export const Sidebar = () => {
@@ -14,6 +14,8 @@ export const Sidebar = () => {
       <VehicleEquipment />
 
       <VehicleType />
+
+      <SearchButton type="submit">Search</SearchButton>
     </form>
   );
 };
