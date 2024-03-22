@@ -25,7 +25,7 @@ export const CardImage = styled.img`
 `;
 
 export const CardTitle = styled.h2`
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
   line-height: 1.25;
 `;
@@ -61,13 +61,29 @@ export const LocationTitle = styled.h3`
 `;
 
 export const CardDescription = styled.p`
-  color: #475467;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
+  color: var(--gray-color);
   line-height: 1.5;
   margin-bottom: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  max-width: 100%;
+`;
+
+export const FeaturesList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+`;
+export const FeatureItem = styled.li`
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 12px 18px;
+  border-radius: 100px;
+  background: #f2f4f7;
 `;
 
 export const ShowMoreButton = styled.button`

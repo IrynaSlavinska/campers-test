@@ -17,13 +17,15 @@ const advertSlice = createSlice({
     oneAdvert: {},
     isLoading: false,
     error: null,
+    totalResults: 13,
   },
 
   extraReducers: builder => {
     builder
       .addCase(getAllAdvert.pending, handlePending)
       .addCase(getAllAdvert.fulfilled, (state, action) => {
-        state.adverts = action.payload;
+        // state.adverts = [...state.adverts, ...action.payload];
+        state.adverts = [...action.payload];
         state.isLoading = false;
         state.error = null;
       })

@@ -1,5 +1,5 @@
 import sprite from 'assets/icons/icons-sprite.svg';
-
+import { CardFeatures } from './CardFeatures';
 import {
   Content,
   Gallery,
@@ -14,6 +14,8 @@ import {
 } from './Catalog.styled';
 
 export const Catalog = ({ adverts }) => {
+  // console.log(adverts);
+
   return (
     <Content>
       <Gallery>
@@ -21,7 +23,7 @@ export const Catalog = ({ adverts }) => {
           return (
             <GalleryItem key={item._id}>
               <CardImage src={item.gallery[0]} alt={item.name} />
-              <div>
+              <div style={{ overflow: 'hidden' }}>
                 <div
                   style={{
                     display: 'flex',
@@ -64,13 +66,9 @@ export const Catalog = ({ adverts }) => {
                 </div>
 
                 <CardDescription>{item.description}</CardDescription>
-                <ul style={{ marginBottom: '24px' }}>
-                  <li>
-                    <svg width={20} height={20}>
-                      <use xlinkHref={`${sprite}#icon-ac`}></use>
-                    </svg>
-                  </li>
-                </ul>
+
+                <CardFeatures item={item.details} />
+
                 <ShowMoreButton type="button">Show more</ShowMoreButton>
               </div>
             </GalleryItem>

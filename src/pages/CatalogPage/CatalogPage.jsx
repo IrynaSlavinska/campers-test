@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getAllAdvert } from '../../redux/advert/operations';
@@ -14,17 +14,31 @@ export const CatalogPage = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
   const adverts = useSelector(selectAdvert);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
-    dispatch(getAllAdvert());
-  }, [dispatch]);
+    dispatch(getAllAdvert(page));
+  }, [dispatch, page]);
+
+  const handleMoreClick = () => {
+    setPage(prevPage => prevPage + 1);
+  };
 
   return (
     <>
       <CatalogContainer>
         <Sidebar />
 
-        {isLoading ? <div>loading...</div> : <Catalog adverts={adverts} />}
+        {isLoading ? (
+          <div>loading...</div>
+        ) : (
+          <div>
+            <Catalog adverts={adverts} />
+            <button type="button" onClick={() => handleMoreClick()}>
+              Load more
+            </button>
+          </div>
+        )}
       </CatalogContainer>
     </>
   );
