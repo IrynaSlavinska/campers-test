@@ -7,7 +7,7 @@ import { selectAdvert } from '../../redux/selectors';
 
 import { Sidebar } from 'components/FilterPartials/Sidebar';
 
-import { CatalogContainer } from './CatalogPage.styled';
+import { CatalogContainer, LoadMoreButton } from './CatalogPage.styled';
 import { Catalog } from 'components/Catalog/Catalog';
 
 export const CatalogPage = () => {
@@ -34,9 +34,9 @@ export const CatalogPage = () => {
         ) : (
           <div>
             <Catalog adverts={adverts} />
-            <button type="button" onClick={() => handleMoreClick()}>
+            <LoadMoreButton type="button" onClick={() => handleMoreClick()}>
               Load more
-            </button>
+            </LoadMoreButton>
           </div>
         )}
       </CatalogContainer>
