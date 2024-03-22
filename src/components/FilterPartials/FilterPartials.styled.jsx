@@ -43,10 +43,6 @@ export const FilterTitle = styled.h3`
   }
 `;
 
-export const EquipmentList = styled.ul`
-  margin-bottom: 32px;
-`;
-
 export const TypesList = styled.ul`
   display: flex;
   gap: 10px;
@@ -84,4 +80,53 @@ export const TypeLabel = styled.label`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+`;
+
+export const EquipmentList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  gap: 12px 8px;
+`;
+
+export const EquipmentItem = styled.li`
+  width: calc((100% - 24px) / 3);
+  height: 95px;
+  border-radius: 10px;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  mix-blend-mode: multiply;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const EquipmentLabel = styled.label`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const EquipmentCheckboxInput = styled.input`
+  display: none;
+
+  &:checked + svg use {
+    fill: var(--red-color);
+  }
+`;
+
+export const SearchButton = styled.button`
+  margin-top: 64px;
+  padding: 16px 60px;
+  border-radius: 200px;
+  background-color: var(--red-color);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.08px;
+  color: var(--white-color);
+  transition: background-color var(--transition-effect);
+  &:hover,
+  &:focus {
+    color: var(--white-color);
+    background-color: #d84343;
+  }
 `;

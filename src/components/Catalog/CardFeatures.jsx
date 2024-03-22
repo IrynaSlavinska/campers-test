@@ -2,7 +2,6 @@ import sprite from 'assets/icons/icons-sprite.svg';
 import { FeaturesList, FeatureItem } from './Catalog.styled';
 
 export const CardFeatures = ({ item }) => {
-  console.log(item);
   return (
     <FeaturesList>
       <FeatureItem>
