@@ -12,8 +12,6 @@ import {
 } from './Modal.styled';
 
 export const ModalContent = ({ card }) => {
-  console.log(card);
-
   return (
     <div>
       <ContentTitle>{card.name}</ContentTitle>

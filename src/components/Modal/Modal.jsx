@@ -4,6 +4,7 @@ import sprite from 'assets/icons/icons-sprite.svg';
 import {
   ModalBackdrop,
   ModalContainer,
+  ModalWrapper,
   ModalCloseButton,
 } from './Modal.styled';
 import { ModalContent } from './ModalContent';
@@ -23,16 +24,18 @@ export const Modal = ({ isOpen, onClose, card }) => {
     ? createPortal(
         <ModalBackdrop onClick={onClose}>
           <ModalContainer onClick={event => event.stopPropagation()}>
-            <ModalCloseButton
-              type="button"
-              aria-label="Close modal"
-              onClick={onClose}
-            >
-              <svg width={32} height={32}>
-                <use xlinkHref={`${sprite}#icon-close`}></use>
-              </svg>
-            </ModalCloseButton>
-            <ModalContent card={card} />
+            <ModalWrapper>
+              <ModalCloseButton
+                type="button"
+                aria-label="Close modal"
+                onClick={onClose}
+              >
+                <svg width={32} height={32}>
+                  <use xlinkHref={`${sprite}#icon-close`}></use>
+                </svg>
+              </ModalCloseButton>
+              <ModalContent card={card} />
+            </ModalWrapper>
           </ModalContainer>
         </ModalBackdrop>,
         document.getElementById('modal-root')

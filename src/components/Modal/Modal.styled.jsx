@@ -2,24 +2,45 @@ import styled from 'styled-components';
 
 export const ModalBackdrop = styled.div`
   position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   top: 0;
   left: 0;
+  z-index: 69;
   width: 100vw;
   height: 100vh;
   background-color: rgba(17, 18, 19, 0.4);
 `;
 
 export const ModalContainer = styled.div`
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 982px;
   height: 720px;
-  padding: 40px;
+  padding: 40px 30px 40px 40px;
   background-color: #fff;
   border-radius: 8px;
   color: black;
+  overflow: auto;
+`;
+
+export const ModalWrapper = styled.div`
+  overflow-y: auto;
+  padding-right: 30px;
+  max-width: 100%;
+  max-height: 100%;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--gray-color);
+    border-radius: 20px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #d9d9d9;
+    border-radius: 8px;
+  }
 `;
 
 export const ModalCloseButton = styled.button`
@@ -31,6 +52,12 @@ export const ModalCloseButton = styled.button`
 
   & svg {
     stroke: var(--black-color);
+    transition: stroke var(--transition-effect);
+  }
+
+  &:hover svg,
+  &:focus svg {
+    stroke: var(--red-color);
   }
 `;
 
