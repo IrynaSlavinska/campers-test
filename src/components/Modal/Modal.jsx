@@ -6,8 +6,9 @@ import {
   ModalContainer,
   ModalCloseButton,
 } from './Modal.styled';
+import { ModalContent } from './ModalContent';
 
-export const Modal = ({ isOpen, onClose }) => {
+export const Modal = ({ isOpen, onClose, card }) => {
   useEffect(() => {
     const handleCloseKeyPress = event => {
       if (event.code === 'Escape') onClose();
@@ -31,7 +32,7 @@ export const Modal = ({ isOpen, onClose }) => {
                 <use xlinkHref={`${sprite}#icon-close`}></use>
               </svg>
             </ModalCloseButton>
-            children
+            <ModalContent card={card} />
           </ModalContainer>
         </ModalBackdrop>,
         document.getElementById('modal-root')

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getAllAdvert } from '../../redux/advert/operations';
@@ -16,12 +16,18 @@ export const CatalogPage = () => {
   const isLoading = useSelector(selectIsLoading);
   const adverts = useSelector(selectAdvert);
   const [page, setPage] = useState(1);
+  const loadedBefore = useRef(false);
 
   useEffect(() => {
+    if (loadedBefore.current) {
+      return;
+    }
+    loadedBefore.current = true;
     dispatch(getAllAdvert(page));
   }, [dispatch, page]);
 
   const handleMoreClick = () => {
+    loadedBefore.current = false;
     setPage(prevPage => prevPage + 1);
   };
 

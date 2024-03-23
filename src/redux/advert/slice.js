@@ -24,8 +24,8 @@ const advertSlice = createSlice({
     builder
       .addCase(getAllAdvert.pending, handlePending)
       .addCase(getAllAdvert.fulfilled, (state, action) => {
-        // state.adverts = [...state.adverts, ...action.payload];
-        state.adverts = [...action.payload];
+        state.adverts = [...state.adverts, ...action.payload];
+        // state.adverts.push(...action.payload);
         state.isLoading = false;
         state.error = null;
       })

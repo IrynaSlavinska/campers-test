@@ -82,7 +82,11 @@ export const Catalog = ({ adverts }) => {
                 <ShowMoreButton type="button" onClick={openModal}>
                   Show more
                 </ShowMoreButton>
-                <Modal isOpen={modalOpen} onClose={closeModal}></Modal>
+                <Modal
+                  isOpen={modalOpen}
+                  onClose={closeModal}
+                  card={item}
+                ></Modal>
               </div>
             </GalleryItem>
           );
