@@ -33,6 +33,11 @@
       <path d="M18 22.082v-1.649c2.203-1.241 4-4.337 4-7.432 0-4.971 0-9-6-9s-6 4.029-6 9c0 3.096 1.797 6.191 4 7.432v1.649c-6.784 0.555-12 3.888-12 7.918h28c0-4.030-5.216-7.364-12-7.918z"></path>
     </symbol>
 
+    <symbol id="icon-close" viewBox="0 0 32 32">
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3" d="M24 8l-16 16"></path>
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3" d="M8 8l16 16"></path>
+    </symbol>
+
     <symbol id="icon-freezer" viewBox="0 0 32 32">
       <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.0800" d="M23.4 3h-14.793c-1.105 0-2 0.895-2 2v20.387c0 1.104 0.895 2 2 2h14.793c1.104 0 2-0.896 2-2v-20.387c0-1.105-0.896-2-2-2z"></path>
       <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.0800" d="M6.607 13.127h18.787M10.313 10.567v-4.040M10.313 19.44v-4.040M8.427 27.387v0.7c0 0.241 0.095 0.472 0.265 0.643s0.4 0.268 0.642 0.27h1.647c0.242 0 0.475-0.096 0.646-0.268s0.268-0.404 0.268-0.646v-0.7M20.1 27.387v0.7c0 0.242 0.096 0.474 0.268 0.646s0.404 0.268 0.646 0.268h1.653c0.242 0 0.474-0.096 0.646-0.268s0.268-0.404 0.268-0.646v-0.7"></path>

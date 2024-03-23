@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import sprite from 'assets/icons/icons-sprite.svg';
 import { CardFeatures } from './CardFeatures';
+import { Modal } from 'components/Modal/Modal';
 import {
   Content,
   Gallery,
@@ -14,7 +16,15 @@ import {
 } from './Catalog.styled';
 
 export const Catalog = ({ adverts }) => {
-  // console.log(adverts);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   return (
     <Content>
@@ -69,7 +79,10 @@ export const Catalog = ({ adverts }) => {
 
                 <CardFeatures item={item.details} />
 
-                <ShowMoreButton type="button">Show more</ShowMoreButton>
+                <ShowMoreButton type="button" onClick={openModal}>
+                  Show more
+                </ShowMoreButton>
+                <Modal isOpen={modalOpen} onClose={closeModal}></Modal>
               </div>
             </GalleryItem>
           );
