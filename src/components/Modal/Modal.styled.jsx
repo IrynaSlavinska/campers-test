@@ -156,19 +156,35 @@ export const VehicleDetailsTitle = styled.p`
   margin-bottom: 24px;
 `;
 
-export const FeaturesList = styled.ul``;
+export const FeaturesList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+`;
 
 export const FeaturesItem = styled.li`
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 12px 18px;
+  border-radius: 100px;
+  background: #f2f4f7;
+`;
+
+export const FeaturesDetailsText = styled.p`
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.33;
+`;
+
+export const FeaturesDetailsList = styled.ul``;
+
+export const FeaturesDetailsItem = styled.li`
   display: flex;
   justify-content: space-between;
 
   &:not(:last-child) {
     margin-bottom: 14px;
   }
-`;
-
-export const FeaturesDetails = styled.p`
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.33;
 `;
