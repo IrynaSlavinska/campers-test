@@ -121,3 +121,54 @@ export const CardDescription = styled.p`
   line-height: 1.5;
   margin-bottom: 44px;
 `;
+
+export const InfoButtonsList = styled.ul`
+  display: flex;
+  gap: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(16, 24, 40, 0.2);
+  margin-bottom: 44px;
+`;
+
+export const ButtonInfo = styled.button`
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  background-color: transparent;
+`;
+
+export const InfoContainer = styled.div`
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+`;
+
+export const FeaturesContainer = styled.div`
+  width: 430px;
+`;
+
+export const VehicleDetailsTitle = styled.p`
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(16, 24, 40, 0.1);
+  margin-bottom: 24px;
+`;
+
+export const FeaturesList = styled.ul``;
+
+export const FeaturesItem = styled.li`
+  display: flex;
+  justify-content: space-between;
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+`;
+
+export const FeaturesDetails = styled.p`
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.33;
+`;
