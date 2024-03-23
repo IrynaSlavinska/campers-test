@@ -9,6 +9,7 @@ import { Sidebar } from 'components/FilterPartials/Sidebar';
 
 import { CatalogContainer, LoadMoreButton } from './CatalogPage.styled';
 import { Catalog } from 'components/Catalog/Catalog';
+import { Loader } from 'components/Loader/Loader';
 
 export const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -30,7 +31,7 @@ export const CatalogPage = () => {
         <Sidebar />
 
         {isLoading ? (
-          <div>loading...</div>
+          <Loader />
         ) : (
           <div>
             <Catalog adverts={adverts} />
