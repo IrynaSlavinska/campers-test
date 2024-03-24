@@ -44,7 +44,7 @@ export const CardContent = ({ card }) => {
               alignItems: 'center',
             }}
           >
-            <CardTitle>&#x20AC; {card.price.toFixed(2)}</CardTitle>
+            <CardTitle>&#x20AC;{card.price.toFixed(2)}</CardTitle>
 
             <FavButton type="button">
               <svg width={16} height={16}>

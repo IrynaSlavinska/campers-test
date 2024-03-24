@@ -52,7 +52,7 @@ export const ModalContent = ({ card }) => {
         </LocationTitle>
       </RevLocWrap>
 
-      <PriceTitle>&#x20AC; {card.price.toFixed(2)}</PriceTitle>
+      <PriceTitle>&#x20AC;{card.price.toFixed(2)}</PriceTitle>
 
       <GalleryList>
         <GalleryItem>
