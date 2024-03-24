@@ -226,6 +226,7 @@ export const Input = styled.input`
 export const Textarea = styled.textarea`
   padding: 18px;
   width: 100%;
+  min-height: 114px;
   border: none;
   border-radius: 10px;
   background-color: var(--light-color);

@@ -4,12 +4,7 @@ export const Location = () => {
   return (
     <LocationLabel>
       Location
-      <LocationInput
-        type="text"
-        name="location"
-        placeholder="Kyiv, Ukraine"
-        autoFocus
-      />
+      <LocationInput type="text" name="location" placeholder="City" autoFocus />
     </LocationLabel>
   );
 };

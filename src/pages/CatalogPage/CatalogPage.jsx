@@ -6,6 +6,7 @@ import {
   selectAdvert,
   selectTotal,
 } from '../../redux/selectors';
+import { clearAdverts } from '../../redux/advert/slice';
 import { Sidebar } from 'components/FilterPartials/Sidebar';
 import { CatalogContainer, LoadMoreButton } from './CatalogPage.styled';
 import { Catalog } from 'components/Catalog/Catalog';
@@ -26,6 +27,12 @@ export const CatalogPage = () => {
     loadedBefore.current = true;
     dispatch(getAllAdvert(page));
   }, [dispatch, page]);
+
+  useEffect(() => {
+    return () => {
+      dispatch(clearAdverts());
+    };
+  }, [dispatch]);
 
   const handleMoreClick = () => {
     loadedBefore.current = false;

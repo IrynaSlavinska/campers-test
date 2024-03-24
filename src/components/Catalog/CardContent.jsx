@@ -45,6 +45,7 @@ export const CardContent = ({ card }) => {
             }}
           >
             <CardTitle>&#x20AC; {card.price.toFixed(2)}</CardTitle>
+
             <FavButton type="button">
               <svg width={16} height={16}>
                 <use xlinkHref={`${sprite}#icon-heart`}></use>
@@ -52,6 +53,7 @@ export const CardContent = ({ card }) => {
             </FavButton>
           </div>
         </div>
+
         <div style={{ display: 'flex', gap: '16px', marginBottom: '24px' }}>
           <ReviewsTitle>
             <svg width={16} height={16}>
@@ -64,7 +66,7 @@ export const CardContent = ({ card }) => {
               <use xlinkHref={`${sprite}#icon-map-pin`}></use>
             </svg>
 
-            {card.location}
+            {card.location.split(',').reverse().join(', ')}
           </LocationTitle>
         </div>
 

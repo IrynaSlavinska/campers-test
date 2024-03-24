@@ -15,16 +15,3 @@ export const getAllAdvert = createAsyncThunk(
     }
   }
 );
-
-export const getOneAdvert = createAsyncThunk(
-  'advert/getOneAdvert',
-
-  async (id, thunkApi) => {
-    try {
-      const response = await axios.get(`/advert/:${id}`);
-      return response.data;
-    } catch (error) {
-      return thunkApi.rejectWithValue(error.message);
-    }
-  }
-);
