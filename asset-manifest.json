@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/campers-test/static/css/main.7fdf8157.css",
-    "main.js": "/campers-test/static/js/main.47fd6032.js",
+    "main.js": "/campers-test/static/js/main.68fb8683.js",
     "static/media/Inter-SemiBold.ttf": "/campers-test/static/media/Inter-SemiBold.6058d3da655fb35169c2.ttf",
     "static/media/Inter-Medium.ttf": "/campers-test/static/media/Inter-Medium.3f7acfe50aad7ad68548.ttf",
     "static/media/Inter-Regular.ttf": "/campers-test/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
     "static/media/pexels-photo-15167402.jpeg": "/campers-test/static/media/pexels-photo-15167402.03f9dc54fe596c4a0386.jpeg",
+    "static/media/pexels-photo-386025.jpeg": "/campers-test/static/media/pexels-photo-386025.6ac470eba99998d04e91.jpeg",
     "static/media/icons-sprite.svg": "/campers-test/static/media/icons-sprite.ed6e3aa0a0826e4a6d30d67b86b33324.svg",
     "static/media/equipment.svg": "/campers-test/static/media/equipment.46f6fa0015f5cc0eca4062b5c8211146.svg",
     "static/media/type.svg": "/campers-test/static/media/type.a81d7ce0c42bf77c4f5e665db7502378.svg",
     "index.html": "/campers-test/index.html",
     "main.7fdf8157.css.map": "/campers-test/static/css/main.7fdf8157.css.map",
-    "main.47fd6032.js.map": "/campers-test/static/js/main.47fd6032.js.map"
+    "main.68fb8683.js.map": "/campers-test/static/js/main.68fb8683.js.map"
   },
   "entrypoints": [
     "static/css/main.7fdf8157.css",
-    "static/js/main.47fd6032.js"
+    "static/js/main.68fb8683.js"
   ]
 }
