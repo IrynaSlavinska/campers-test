@@ -19,63 +19,63 @@ export const Features = ({ card }) => {
           <svg width={20} height={20}>
             <use xlinkHref={`${sprite}#icon-adults`}></use>
           </svg>
-          <p>{data.adults} adults</p>
+          <p>{data.adults ? `${data.adults} adults` : ''}</p>
         </FeaturesItem>
 
         <FeaturesItem>
           <svg width={20} height={20}>
             <use xlinkHref={`${sprite}#icon-automatic`}></use>
           </svg>
-          <p>{data.transmission}</p>
+          <p>{data.transmission ? `${data.transmission}` : ''}</p>
         </FeaturesItem>
 
         <FeaturesItem>
           <svg width={20} height={20}>
             <use xlinkHref={`${sprite}#icon-petrol`}></use>
           </svg>
-          <p>{data.engine}</p>
+          <p>{data.engine ? `${data.engine}` : ''}</p>
         </FeaturesItem>
 
         <FeaturesItem>
           <svg width={20} height={20}>
             <use xlinkHref={`${sprite}#icon-kitchen`}></use>
           </svg>
-          <p>{data.kitchen} kitchen</p>
+          <p>{data.kitchen ? 'kitchen' : ''}</p>
         </FeaturesItem>
 
         <FeaturesItem>
           <svg width={20} height={20}>
             <use xlinkHref={`${sprite}#icon-bed`}></use>
           </svg>
-          <p>{data.beds} bed(-s)</p>
+          <p>{data.beds ? `${data.beds} bed(-s)` : ''}</p>
         </FeaturesItem>
 
         <FeaturesItem>
           <svg width={20} height={20}>
             <use xlinkHref={`${sprite}#icon-hob`}></use>
           </svg>
-          <p>{data.hob} hob</p>
+          <p>{data.hob ? `${data.hob}` : ''}</p>
         </FeaturesItem>
 
         <FeaturesItem>
           <svg width={20} height={20}>
             <use xlinkHref={`${sprite}#icon-air-conditioner`}></use>
           </svg>
-          <p>{data.airConditioner} air conditioner</p>
+          <p>{data.airConditioner ? 'air conditioner' : ''}</p>
         </FeaturesItem>
 
         <FeaturesItem>
           <svg width={20} height={20}>
             <use xlinkHref={`${sprite}#icon-radio`}></use>
           </svg>
-          <p>{data.radio} radio</p>
+          <p>{data.radio ? 'radio' : ''}</p>
         </FeaturesItem>
 
         <FeaturesItem>
           <svg width={20} height={20}>
             <use xlinkHref={`${sprite}#icon-cd`}></use>
           </svg>
-          <p>{data.CD}</p>
+          <p>{data.CD ? 'CD' : ''}</p>
         </FeaturesItem>
       </FeaturesList>
 

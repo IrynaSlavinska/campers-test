@@ -15,3 +15,15 @@ export const getAllAdvert = createAsyncThunk(
     }
   }
 );
+
+export const addBooking = createAsyncThunk(
+  'bokking/addBooking',
+  async (body, thunkAPI) => {
+    try {
+      const response = await axios.post('/booking', body);
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);

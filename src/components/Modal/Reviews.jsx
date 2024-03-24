@@ -9,7 +9,6 @@ import {
 
 export const Reviews = ({ card }) => {
   const reviews = card.reviews;
-  console.log(reviews);
   return (
     <ReviewsList>
       {reviews.map(rev => {

@@ -8,14 +8,14 @@ export const CardFeatures = ({ item }) => {
         <svg width={20} height={20}>
           <use xlinkHref={`${sprite}#icon-adults`}></use>
         </svg>
-        <p>{item.adults} adults</p>
+        <p>{item.adults ? `${item.adults} adults` : ''}</p>
       </FeatureItem>
 
       <FeatureItem>
         <svg width={20} height={20}>
           <use xlinkHref={`${sprite}#icon-child`}></use>
         </svg>
-        <p>{item.children} children</p>
+        <p>{item.children ? `${item.children} children` : ''}</p>
       </FeatureItem>
 
       <FeatureItem>
@@ -36,14 +36,14 @@ export const CardFeatures = ({ item }) => {
         <svg width={20} height={20}>
           <use xlinkHref={`${sprite}#icon-kitchen`}></use>
         </svg>
-        <p>kitchen</p>
+        <p>{item.kitchen ? `kitchen` : ''}</p>
       </FeatureItem>
 
       <FeatureItem>
         <svg width={20} height={20}>
           <use xlinkHref={`${sprite}#icon-bed`}></use>
         </svg>
-        <p>{item.beds} beds</p>
+        <p>{item.beds ? `${item.beds} beds` : ''}</p>
       </FeatureItem>
     </FeaturesList>
   );

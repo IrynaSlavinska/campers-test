@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getAllAdvert } from './operations';
+import { getAllAdvert, addBooking } from './operations';
 
 const handlePending = state => {
   state.isLoading = true;
@@ -19,6 +19,7 @@ const advertSlice = createSlice({
     isLoading: false,
     error: null,
     totalResults: 13,
+    booking: {},
   },
 
   reducers: {
@@ -35,7 +36,16 @@ const advertSlice = createSlice({
         state.isLoading = false;
         state.error = null;
       })
-      .addCase(getAllAdvert.rejected, handleError);
+      .addCase(getAllAdvert.rejected, handleError)
+
+      .addCase(addBooking.pending, handlePending)
+      .addCase(addBooking.fulfilled, (state, action) => {
+        console.log(action.payload);
+        state.booking = action.payload;
+        state.isLoading = false;
+        state.error = null;
+      })
+      .addCase(addBooking.rejected, handlePending);
   },
 });
 
