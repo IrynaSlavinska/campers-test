@@ -109,19 +109,6 @@ export const ModalContent = ({ card }) => {
           )}
           <BookForm />
         </InfoContainer>
-
-        {/* {showFeatures && (
-          <InfoContainer>
-            <Features card={card} />
-            <BookForm />
-          </InfoContainer>
-        )}
-        {showReviews && (
-          <InfoContainer>
-            <Reviews card={card} />
-            <BookForm />
-          </InfoContainer>
-        )} */}
       </ScrollContentContainer>
     </div>
   );

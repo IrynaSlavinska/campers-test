@@ -7,11 +7,6 @@ import { CatalogPage } from 'pages/CatalogPage/CatalogPage';
 import { FavoritesPage } from 'pages/FavoritesPage/FavoritesPage';
 import { NotFoundPage } from 'pages/NotFoundPage/NotFoundPage';
 
-// const HomePage = lazy(() => import('pages/HomePage/HomePage'));
-// const CatalogPage = lazy(() => import('pages/CatalogPage/CatalogPage'));
-// const FavoritesPage = lazy(() => import('pages/FavoritesPage/FavoritesPage'));
-// const NotFoundPage = lazy(() => import('pages/NotFoundPage/NotFoundPage'));
-
 export const App = () => {
   return (
     <Routes>
