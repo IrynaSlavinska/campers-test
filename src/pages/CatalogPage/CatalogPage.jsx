@@ -21,18 +21,18 @@ export const CatalogPage = () => {
   const total = useSelector(selectTotal);
 
   useEffect(() => {
+    return () => {
+      dispatch(clearAdverts());
+    };
+  }, [dispatch]);
+
+  useEffect(() => {
     if (loadedBefore.current) {
       return;
     }
     loadedBefore.current = true;
     dispatch(getAllAdvert(page));
   }, [dispatch, page]);
-
-  useEffect(() => {
-    return () => {
-      dispatch(clearAdverts());
-    };
-  }, [dispatch]);
 
   const handleMoreClick = () => {
     loadedBefore.current = false;

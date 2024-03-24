@@ -25,17 +25,17 @@ const advertSlice = createSlice({
     clearAdverts(state, action) {
       state.adverts = [];
     },
+  },
 
-    extraReducers: builder => {
-      builder
-        .addCase(getAllAdvert.pending, handlePending)
-        .addCase(getAllAdvert.fulfilled, (state, action) => {
-          state.adverts = [...state.adverts, ...action.payload];
-          state.isLoading = false;
-          state.error = null;
-        })
-        .addCase(getAllAdvert.rejected, handleError);
-    },
+  extraReducers: builder => {
+    builder
+      .addCase(getAllAdvert.pending, handlePending)
+      .addCase(getAllAdvert.fulfilled, (state, action) => {
+        state.adverts = [...state.adverts, ...action.payload];
+        state.isLoading = false;
+        state.error = null;
+      })
+      .addCase(getAllAdvert.rejected, handleError);
   },
 });
 
