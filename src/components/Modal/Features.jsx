@@ -52,9 +52,9 @@ export const Features = ({ card }) => {
 
         <FeaturesItem>
           <svg width={20} height={20}>
-            <use xlinkHref={`${sprite}#icon-cd`}></use>
+            <use xlinkHref={`${sprite}#icon-hob`}></use>
           </svg>
-          <p>{data.CD}</p>
+          <p>{data.hob} hob</p>
         </FeaturesItem>
 
         <FeaturesItem>
@@ -73,9 +73,9 @@ export const Features = ({ card }) => {
 
         <FeaturesItem>
           <svg width={20} height={20}>
-            <use xlinkHref={`${sprite}#icon-hob`}></use>
+            <use xlinkHref={`${sprite}#icon-cd`}></use>
           </svg>
-          <p>{data.hob}</p>
+          <p>{data.CD}</p>
         </FeaturesItem>
       </FeaturesList>
 
