@@ -18,95 +18,111 @@ import { Features } from './Features';
 import { Reviews } from './Reviews';
 import { BookForm } from './BookForm';
 
+import { ScrollContentContainer } from './Modal.styled';
+
 export const ModalContent = ({ card }) => {
-  const [showFeatures, setShowFeatures] = useState(false);
-  const [showReviews, setShowReviews] = useState(false);
+  const [activeTab, setActiveTab] = useState('features');
 
-  const handleFeaturesClick = () => {
-    setShowFeatures(true);
-    setShowReviews(false);
-  };
+  const handleFeaturesClick = () => setActiveTab('features');
+  const handleReviewsClick = () => setActiveTab('reviews');
 
-  const handleReviewsClick = () => {
-    setShowFeatures(false);
-    setShowReviews(true);
-  };
   return (
     <div>
-      <ContentTitle>{card.name}</ContentTitle>
+      <div>
+        <ContentTitle>{card.name}</ContentTitle>
 
-      <RevLocWrap>
-        <ReviewsTitle>
-          <svg width={16} height={16}>
-            <use xlinkHref={`${sprite}#icon-star`}></use>
-          </svg>
-          {card.rating} ({card.reviews.length} Reviews)
-        </ReviewsTitle>
+        <RevLocWrap>
+          <ReviewsTitle>
+            <svg width={16} height={16}>
+              <use xlinkHref={`${sprite}#icon-star`}></use>
+            </svg>
+            {card.rating} ({card.reviews.length} Reviews)
+          </ReviewsTitle>
 
-        <LocationTitle>
-          <svg width={16} height={16}>
-            <use xlinkHref={`${sprite}#icon-map-pin`}></use>
-          </svg>
+          <LocationTitle>
+            <svg width={16} height={16}>
+              <use xlinkHref={`${sprite}#icon-map-pin`}></use>
+            </svg>
 
-          {card.location}
-        </LocationTitle>
-      </RevLocWrap>
+            {card.location}
+          </LocationTitle>
+        </RevLocWrap>
 
-      <PriceTitle>&#x20AC;{card.price.toFixed(2)}</PriceTitle>
+        <PriceTitle>&#x20AC;{card.price.toFixed(2)}</PriceTitle>
+      </div>
 
-      <GalleryList>
-        <GalleryItem>
-          <GalleryImage
-            src={card.gallery[0]}
-            alt="camper"
-            width={290}
-            height={310}
-          />
-        </GalleryItem>
-        <GalleryItem>
-          <GalleryImage
-            src={card.gallery[1]}
-            alt="camper"
-            width={290}
-            height={310}
-          />
-        </GalleryItem>
-        <GalleryItem>
-          <GalleryImage
-            src={card.gallery[2]}
-            alt="camper"
-            width={290}
-            height={310}
-          />
-        </GalleryItem>
-      </GalleryList>
-      <CardDescription>{card.description}</CardDescription>
+      <ScrollContentContainer>
+        <GalleryList>
+          <GalleryItem>
+            <GalleryImage
+              src={card.gallery[0]}
+              alt="camper"
+              width={290}
+              height={310}
+            />
+          </GalleryItem>
+          <GalleryItem>
+            <GalleryImage
+              src={card.gallery[1]}
+              alt="camper"
+              width={290}
+              height={310}
+            />
+          </GalleryItem>
+          <GalleryItem>
+            <GalleryImage
+              src={card.gallery[2]}
+              alt="camper"
+              width={290}
+              height={310}
+            />
+          </GalleryItem>
+        </GalleryList>
+        <CardDescription>{card.description}</CardDescription>
 
-      <InfoButtonsList>
-        <li>
-          <ButtonInfo type="button" onClick={handleFeaturesClick}>
-            Features
-          </ButtonInfo>
-        </li>
-        <li>
-          <ButtonInfo type="button" onClick={handleReviewsClick}>
-            Reviews
-          </ButtonInfo>
-        </li>
-      </InfoButtonsList>
+        <InfoButtonsList>
+          <li>
+            <ButtonInfo
+              type="button"
+              onClick={handleFeaturesClick}
+              active={activeTab === 'features'}
+            >
+              Features
+            </ButtonInfo>
+          </li>
+          <li>
+            <ButtonInfo
+              type="button"
+              onClick={handleReviewsClick}
+              active={activeTab === 'reviews'}
+            >
+              Reviews
+            </ButtonInfo>
+          </li>
+        </InfoButtonsList>
 
-      {showFeatures && (
         <InfoContainer>
-          <Features card={card} />
+          {activeTab === 'features' ? (
+            <Features card={card} />
+          ) : (
+            <Reviews card={card} />
+          )}
           <BookForm />
         </InfoContainer>
-      )}
-      {showReviews && (
-        <InfoContainer>
-          <Reviews card={card} />
-          <BookForm />
-        </InfoContainer>
-      )}
+
+        {/* {showFeatures && (
+          <InfoContainer>
+            <Features card={card} />
+            <BookForm />
+          </InfoContainer>
+        )}
+        {showReviews && (
+          <InfoContainer>
+            <Reviews card={card} />
+            <BookForm />
+          </InfoContainer>
+        )} */}
+      </ScrollContentContainer>
     </div>
   );
 };

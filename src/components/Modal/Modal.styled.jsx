@@ -17,19 +17,22 @@ export const ModalContainer = styled.div`
   transform: translate(-50%, -50%);
   width: 982px;
   height: 720px;
-  padding: 40px 30px 40px 40px;
+  padding: 40px 16px 40px 40px;
   background-color: #fff;
   border-radius: 8px;
   color: black;
-  overflow: auto;
 `;
 
 export const ModalWrapper = styled.div`
-  overflow-y: auto;
-  padding-right: 30px;
   max-width: 100%;
   max-height: 100%;
+`;
 
+export const ScrollContentContainer = styled.div`
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 480px;
+  padding-right: 24px;
   &::-webkit-scrollbar {
     width: 8px;
   }
@@ -49,12 +52,10 @@ export const ModalCloseButton = styled.button`
   right: 40px;
   background-color: transparent;
   padding: 0;
-
   & svg {
     stroke: var(--black-color);
     transition: stroke var(--transition-effect);
   }
-
   &:hover svg,
   &:focus svg {
     stroke: var(--red-color);
@@ -120,6 +121,7 @@ export const CardDescription = styled.p`
   color: var(--gray-color);
   line-height: 1.5;
   margin-bottom: 44px;
+  width: 900px;
 `;
 
 export const InfoButtonsList = styled.ul`
@@ -135,6 +137,17 @@ export const ButtonInfo = styled.button`
   font-weight: 600;
   line-height: 1.2;
   background-color: transparent;
+  transition: color var(--transition-effect);
+  &:hover,
+  &:focus {
+    color: var(--red-color);
+  }
+
+  ${props =>
+    props.active &&
+    `
+   color: var(--red-color);
+  `}
 `;
 
 export const InfoContainer = styled.div`
@@ -190,7 +203,7 @@ export const FeaturesDetailsItem = styled.li`
 `;
 
 export const Form = styled.form`
-  width: 448px;
+  width: 430px;
   padding: 24px;
 `;
 
