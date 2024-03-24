@@ -40,7 +40,6 @@ const advertSlice = createSlice({
 
       .addCase(addBooking.pending, handlePending)
       .addCase(addBooking.fulfilled, (state, action) => {
-        console.log(action.payload);
         state.booking = action.payload;
         state.isLoading = false;
         state.error = null;
