@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/campers-test/static/css/main.7fdf8157.css",
-    "main.js": "/campers-test/static/js/main.d3c8820c.js",
+    "main.js": "/campers-test/static/js/main.bf4d4fc0.js",
     "static/media/Inter-SemiBold.ttf": "/campers-test/static/media/Inter-SemiBold.6058d3da655fb35169c2.ttf",
     "static/media/Inter-Medium.ttf": "/campers-test/static/media/Inter-Medium.3f7acfe50aad7ad68548.ttf",
     "static/media/Inter-Regular.ttf": "/campers-test/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
@@ -11,10 +11,10 @@
     "static/media/type.svg": "/campers-test/static/media/type.a81d7ce0c42bf77c4f5e665db7502378.svg",
     "index.html": "/campers-test/index.html",
     "main.7fdf8157.css.map": "/campers-test/static/css/main.7fdf8157.css.map",
-    "main.d3c8820c.js.map": "/campers-test/static/js/main.d3c8820c.js.map"
+    "main.bf4d4fc0.js.map": "/campers-test/static/js/main.bf4d4fc0.js.map"
   },
   "entrypoints": [
     "static/css/main.7fdf8157.css",
-    "static/js/main.d3c8820c.js"
+    "static/js/main.bf4d4fc0.js"
   ]
 }
